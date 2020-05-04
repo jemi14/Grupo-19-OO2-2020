@@ -1,0 +1,24 @@
+<table>
+	<thead>
+		<tr>
+			<th>Descripcion</th>
+			<th>PrecioUnitario</th>
+			<th>Nombre</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr th:each="producto : ${productos}">
+			<td><span th:text="${producto.descripcion}" /></td>
+			<td><span th:text="${producto.precioUnitario}" /></td>
+			<td><span th:text="${producto.nombre}" /></td>
+		</tr>
+	</tbody>
+</table>
+
+
+<form action="#" th:action="@{/productos/agregarproductoyvolveraindex}" th:object="${productoModelo}" method="post">
+	<p>Descripcion <input type="text" th:field="*{descripcion}" /></p>
+	<p>Precio: <input type="number" th:field="*{precioUnitario}" /></p>
+	<p>Nombre: <input type="text" th:field="*{nombre}" /></p>
+	<input type="submit" />
+</form>
