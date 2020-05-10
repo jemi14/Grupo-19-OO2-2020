@@ -1,0 +1,9 @@
+1-a Crear BD mysql con el nombre: Grupo-19-BDD-OO2-2020
+1-b Setear el horario de la base de datos SET GLOBAL time_zone = '-3:00'
+
+
+2- Cargar la base de datos desde localhost:8080/cargar/
+3-Usar los menu PRODUCTOS  o PERSONAS
+
+ABM personas: localhost:8080/personas
+ABM productos: localhost:8080/productos
