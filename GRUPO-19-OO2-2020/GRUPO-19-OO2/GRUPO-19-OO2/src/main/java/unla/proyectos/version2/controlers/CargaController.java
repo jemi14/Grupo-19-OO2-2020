@@ -15,6 +15,7 @@ import org.springframework.web.servlet.view.RedirectView;
 import unla.proyectos.version2.helpers.ViewRouteHelper;
 import unla.proyectos.version2.models.ClienteModel;
 import unla.proyectos.version2.models.GerenteModel;
+import unla.proyectos.version2.models.LocalModel;
 import unla.proyectos.version2.models.ProductoModel;
 import unla.proyectos.version2.models.VendedorModel;
 import unla.proyectos.version2.services.IClienteService;
@@ -49,6 +50,10 @@ public class CargaController {
 	@Qualifier("productoService")
 	private IProductoService productoService;
 	
+	@Autowired
+	@Qualifier("localService")
+	private ILocalService localService;
+	
 
 	;
 	
@@ -82,6 +87,16 @@ public class CargaController {
 		
 		productoService.insert(p1);productoService.insert(p2);productoService.insert(p3);
 		
+		
+		
+		
+		LocalModel local1 = new LocalModel("Banfield", "Rodriguez", 1111,1234l,-34.42f,-58.23f,gerenteService.findById(7));
+		LocalModel local2 = new LocalModel("Lanus", "Alfonsin", 22222,12224l,-34.45f,-58.22f,gerenteService.findById(8));
+		LocalModel local3 = new LocalModel("Resistencia", "Chaco", 333,12224l,-27.45f,-58.98f,gerenteService.findById(9));
+		
+		localService.insert(local1);
+		localService.insert(local2);
+		localService.insert(local3);
 
 		
 		
@@ -93,9 +108,8 @@ public class CargaController {
 		StockModel s5 = new StockModel(p2,101,null);
 		StockModel s6 = new StockModel(p3,2,null);
 		
-		SucursalModel sucu1 = new SucursalModel("Banfield", "Rodriguez", 1111,1234l,34.33f,66.23f,g1);
-		SucursalModel sucu2 = new SucursalModel("Banfiel", "Araoz", 211,22222l,34.885f,66.83f,g2);
-		SucursalModel sucu3 = new SucursalModel("Lomas", "Av.Siempre", 211 ,2222l,31.885f,661.83f,g3);
+		
+	
 		
 		
 		stockService.insert(s1);stockService.insert(s2);stockService.insert(s3);

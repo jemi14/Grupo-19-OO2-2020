@@ -137,11 +137,15 @@ public class ProductosController {
     	
     	ArrayList <String>  distanciasDeSucursales= new ArrayList <String>();
     	
+    	String texto = "El local de " +l.getLocalidad();
+    	distanciasDeSucursales.add(texto);
+    	
     	for(Local locales: localService.getAll()) {
     		
-    		String texto = "Dista del local de " +locales.getLocalidad() +"    "+String.valueOf(l.calcularDistancia(locales.getLatitud(), locales.getLongitud())) +"Km";
+    		if(locales.getId()!=localModel.getId()) {
+    		texto = "Dista del local de " +locales.getLocalidad() +"    "+String.valueOf(l.calcularDistancia(locales.getLatitud(), locales.getLongitud())) +"Km";
     		distanciasDeSucursales.add(texto);
-    		
+    		}
     		System.out.print(texto);
     		
     	}

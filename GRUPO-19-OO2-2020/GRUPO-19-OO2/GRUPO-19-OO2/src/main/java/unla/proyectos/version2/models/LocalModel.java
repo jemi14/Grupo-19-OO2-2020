@@ -156,6 +156,7 @@ public class LocalModel {
 	}
 	
 	
+	
    public double calcularDistancia(float lat, float lon) {
 		
 		float latitud1 = this.latitud;
