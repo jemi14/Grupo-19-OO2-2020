@@ -19,8 +19,6 @@ import unla.proyectos.version2.services.IClienteService;
 import unla.proyectos.version2.services.IGerenteService;
 import unla.proyectos.version2.services.IVendedorService;
 
-
-
 @Controller
 @RequestMapping("/personas")
 public class PersonasController {
@@ -37,8 +35,6 @@ public class PersonasController {
 	@Qualifier("vendedorService")
 	private IVendedorService vendedorService;
 	
-
-	
 	
 	////////////////////////INDEX QUE ADMINISTRA GER, EMPLE, CLIENTE y EMPLEADOS//////////////
 	@GetMapping("")
@@ -53,14 +49,12 @@ public class PersonasController {
      	mAV.addObject("vendedores", vendedorService.getAll());
     	mAV.addObject("vendedorModel", new VendedorModel());
     	
-      	
         return mAV;
     }
 	/////////////////////////////////////////////////////////////////////////////////////
  
 
-	
-	/////////////////////////////////////ABM GENRENTES////////////////////////////////////////////////
+	/////////////////////////////////////ABM GERENTES////////////////////////////////////////////////
     @PostMapping("/agregargerenteyvolveraindex")
     public RedirectView create(@ModelAttribute("gerenteModel") GerenteModel gerenteModel){
         gerenteService.insertOrUpdate(gerenteModel);

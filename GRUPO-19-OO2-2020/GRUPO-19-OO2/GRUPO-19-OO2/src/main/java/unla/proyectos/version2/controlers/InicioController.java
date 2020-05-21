@@ -10,17 +10,9 @@ import org.springframework.web.servlet.view.RedirectView;
 
 import unla.proyectos.version2.helpers.ViewRouteHelper;
 
-
-
-
-
-
-
 @Controller
 @RequestMapping("/")
 public class InicioController {
-	
-	
 	
 	@GetMapping("/")
 	public RedirectView redirectToHomeIndex() {

@@ -1,9 +1,7 @@
 package unla.proyectos.version2.controlers;
 
-
-
-
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,11 +23,6 @@ import unla.proyectos.version2.services.ILocalService;
 import unla.proyectos.version2.services.IProductoService;
 import unla.proyectos.version2.services.IStockService;
 import unla.proyectos.version2.services.IVendedorService;
-
-
-
-
-
 
 @Controller
 @RequestMapping("/cargar")
@@ -60,13 +53,8 @@ public class CargaController {
 	@Qualifier("stockService")
 	private IStockService stockService;
 	
-
-	;
-	
 	@GetMapping("/")
 	public RedirectView redirectToHomeIndex() {
-		
-		
 		
 		GerenteModel g1 = new GerenteModel("Griselda", "Benitez", null, 1111111,  120000 );
 		GerenteModel g2 = new GerenteModel("Leandro", "Haugg", null, 1222222,  220000 );
@@ -84,7 +72,7 @@ public class CargaController {
 		
 		ProductoModel p1 = new ProductoModel( "EL mas rico", 123.5f,"Chocolate");
 		ProductoModel p2 = new ProductoModel( "Baratito", 13.5f,"Kinder");
-		ProductoModel p3 = new ProductoModel( "Duro pero rico", 11f,"Caramelo");
+		ProductoModel p3 = new ProductoModel( "Rico", 11f,"Caramelo");
 		
 		
 		vendedorService.insert(v1);vendedorService.insert(v2);vendedorService.insert(v3);
@@ -114,22 +102,11 @@ public class CargaController {
 		StockModel s6 = new StockModel(productoService.findById(3),localService.findById(1),2,null);
 		
 		
-	
-		
-		
+
 		stockService.insert(s1);stockService.insert(s2);stockService.insert(s3);
 		stockService.insert(s4);stockService.insert(s5);stockService.insert(s6);
 				
 				
-		
-
-				
-		
-		
-		
-		
-		
-		
 		
 		return new RedirectView(ViewRouteHelper.PRODUCTOS_ROOT);
 	}
