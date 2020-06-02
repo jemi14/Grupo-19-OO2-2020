@@ -2,6 +2,7 @@ package unla.proyectos.version2.controlers;
 
 
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -138,6 +139,8 @@ public class AbmsController {
     	stockModel.setProducto(p);
     	stockModel.setLocal(l);
     	stockModel.getLocal().setGerente(g);
+    	
+    	stockModel.setFechaIngreso(LocalDate.now());
     	
     	
     	System.out.print("-----STOCK NUEVOOOO-------");
