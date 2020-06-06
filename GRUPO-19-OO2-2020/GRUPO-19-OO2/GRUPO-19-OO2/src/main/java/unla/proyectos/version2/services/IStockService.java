@@ -9,8 +9,6 @@ import unla.proyectos.version2.models.PedidoModel;
 import unla.proyectos.version2.models.ProductoModel;
 import unla.proyectos.version2.models.StockModel;
 
-
-
 public interface IStockService {
 
 	public List<Stock> getAll();
@@ -28,7 +26,6 @@ public interface IStockService {
 	public int totalPorProducto(ProductoModel productoModel);
 	
 	public int totalPorProductoYLocal(ProductoModel productoModel, LocalModel localModel);
-	
 	
 	public PedidoModel calculoDescripcionPedido(PedidoModel pedidoModel);
 	

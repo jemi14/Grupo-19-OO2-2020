@@ -12,8 +12,6 @@ import unla.proyectos.version2.models.ClienteModel;
 import unla.proyectos.version2.repositories.IClienteRepository;
 import unla.proyectos.version2.services.IClienteService;
 
-
-
 @Service("clienteService")
 public class ClienteService implements IClienteService{
 	
@@ -67,6 +65,5 @@ public class ClienteService implements IClienteService{
         }
 	}
 
-	
 
 }

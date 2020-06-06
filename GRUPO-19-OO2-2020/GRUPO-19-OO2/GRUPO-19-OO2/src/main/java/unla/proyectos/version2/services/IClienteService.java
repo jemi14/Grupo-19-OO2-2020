@@ -5,8 +5,6 @@ import java.util.List;
 import unla.proyectos.version2.entities.Cliente;
 import unla.proyectos.version2.models.ClienteModel;
 
-
-
 public interface IClienteService {
 	public List<Cliente> getAll();
     public ClienteModel findByIdPersona(long id);

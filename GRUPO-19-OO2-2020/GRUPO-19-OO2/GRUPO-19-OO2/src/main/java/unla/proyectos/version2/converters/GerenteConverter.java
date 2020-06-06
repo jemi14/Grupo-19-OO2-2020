@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import unla.proyectos.version2.entities.Gerente;
 import unla.proyectos.version2.models.GerenteModel;
 
-
 @Component("gerenteConverter")
 public class GerenteConverter {
 	public GerenteModel entityToModel(Gerente gerente){

@@ -10,7 +10,6 @@ public class ProductoModel {
     private float precioUnitario;
     private String nombre;
     
-    
     private Set<PedidoModel> pedidos=new HashSet<PedidoModel>();
 
     public ProductoModel(){}
@@ -23,8 +22,7 @@ public class ProductoModel {
     }
     
     
-    public ProductoModel( String descripcion, float precioUnitario, String nombre) {
-     
+    public ProductoModel( String descripcion, float precioUnitario, String nombre) { 
         this.descripcion = descripcion;
         this.precioUnitario = precioUnitario;
         this.nombre = nombre;
@@ -76,11 +74,4 @@ public class ProductoModel {
 	public void setPedidos(Set<PedidoModel> pedidos) {
 		this.pedidos = pedidos;
 	}
-
-	
-	
-	
-    
-    
-    
 }

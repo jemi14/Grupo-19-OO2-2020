@@ -2,18 +2,12 @@ package unla.proyectos.version2.models;
 
 import java.time.LocalDate;
 
-
 public class StockModel {
 
 	private long id;
-	
 	private ProductoModel producto;
-	
 	private LocalModel local;
-
 	private int cantidad;
-
-
 	private LocalDate fechaIngreso;
 
 	public StockModel() {}
@@ -32,8 +26,6 @@ public class StockModel {
 		this.fechaIngreso = fechaIngreso;
 	}
 	
-	
-
 	public long getId() {
 		return id;
 	}
@@ -58,8 +50,6 @@ public class StockModel {
 		this.cantidad = cantidad;
 	}
 
-
-
 	public LocalDate getFechaIngreso() {
 		return fechaIngreso;
 	}
@@ -76,8 +66,6 @@ public class StockModel {
 		this.cantidad = cantidad;
 		this.fechaIngreso = fechaIngreso;
 	}
-
-	
 	
 	public StockModel(long id, ProductoModel producto, int cantidad, LocalDate fechaIngreso, LocalModel local) {
 		super();
@@ -87,11 +75,9 @@ public class StockModel {
 		this.cantidad = cantidad;
 		this.fechaIngreso = fechaIngreso;
 	}
-	
-	
-	public StockModel(ProductoModel producto, LocalModel local, int cantidad, LocalDate fechaIngreso) {
-		super();
 		
+	public StockModel(ProductoModel producto, LocalModel local, int cantidad, LocalDate fechaIngreso) {
+		super();	
 		this.producto = producto;
 		this.local = local;
 		this.cantidad = cantidad;
@@ -111,14 +97,4 @@ public class StockModel {
 		return "StockModel [id=" + id + ", producto=" + producto + ", local=" + local + ", cantidad=" + cantidad
 				+ ", fechaIngreso=" + fechaIngreso + "]";
 	}
-
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

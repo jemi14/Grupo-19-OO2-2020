@@ -1,10 +1,7 @@
 package unla.proyectos.version2.models;
 
-
 import java.util.HashSet;
 import java.util.Set;
-
-import javax.persistence.Column;
 
 public class LocalModel {
 
@@ -16,8 +13,6 @@ public class LocalModel {
 	private float latitud;
 	private float longitud;
     private GerenteModel gerente;
-    
-    
     
     private Set<VendedorModel> vendedores=new HashSet<VendedorModel>();
     private Set<StockModel> stocks=new HashSet<StockModel>();
@@ -134,12 +129,9 @@ public class LocalModel {
 	
 	}
 
-	
-	
 	public LocalModel( String localidad, String calle, int numero, long telefono, float latitud,
 			float longitud, GerenteModel gerente) {
-		super();
-		
+		super();		
 		this.localidad = localidad;
 		this.calle = calle;
 		this.numero = numero;
@@ -149,7 +141,6 @@ public class LocalModel {
 		this.gerente = gerente;
 	
 	}
-	
 	
 	public LocalModel( long id, String localidad, String calle, int numero, long telefono, float latitud,
 			float longitud) {
@@ -161,13 +152,8 @@ public class LocalModel {
 		this.telefono = telefono;
 		this.latitud = latitud;
 		this.longitud = longitud;
-	
-	
 	}
 
-
-	
-	
    public double calcularDistancia(float lat, float lon) {
 		
 		float latitud1 = this.latitud;
@@ -188,15 +174,6 @@ public class LocalModel {
 
 	}
    
-   
-   
-   
-
-   
-   
-   
-   
-
 public Set<PedidoModel> getPedidos() {
 	return pedidos;
 }
@@ -227,11 +204,5 @@ public String toString() {
 			+ ", telefono=" + telefono + ", latitud=" + latitud + ", longitud=" + longitud + ", gerente=" + gerente
 			+ ", vendedores=" + vendedores + ", stocks=" + stocks + ", pedidos=" + pedidos + "]";
 }
-   
-   
-   
-
-	
-	
-   
+  
 }

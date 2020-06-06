@@ -12,8 +12,6 @@ import unla.proyectos.version2.models.PersonaModel;
 import unla.proyectos.version2.repositories.IPersonaRepository;
 import unla.proyectos.version2.services.IPersonaService;
 
-
-
 @Service("personaService")
 public class PersonaService implements IPersonaService{
 	
@@ -30,8 +28,6 @@ public class PersonaService implements IPersonaService{
 		return personaRepository.findAll();
 	}
 	
-	
-
 	@Override
 	public PersonaModel findByIdPersona(long idPersona) {
 		return personaConverter.entityToModel(personaRepository.findByIdPersona(idPersona));
@@ -42,8 +38,6 @@ public class PersonaService implements IPersonaService{
 		return personaConverter.entityToModel(personaRepository.findByDni(dni));
 	}
 	
-	
-
 	@Override
 	public PersonaModel insertOrUpdate(PersonaModel personaModel) {
 		Persona  persona = personaRepository.save(personaConverter.modelToEntity(personaModel));
@@ -67,5 +61,4 @@ public class PersonaService implements IPersonaService{
             return false;
         }
 	}
-
 }

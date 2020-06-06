@@ -7,7 +7,6 @@ import org.springframework.stereotype.Component;
 import unla.proyectos.version2.entities.Stock;
 import unla.proyectos.version2.models.StockModel;
 
-
 @Component("stockConverter")
 public class StockConverter {
 

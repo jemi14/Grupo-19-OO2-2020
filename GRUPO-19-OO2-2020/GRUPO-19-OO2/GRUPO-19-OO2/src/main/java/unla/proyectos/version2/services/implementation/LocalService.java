@@ -1,6 +1,5 @@
 package unla.proyectos.version2.services.implementation;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -44,22 +43,12 @@ public class LocalService implements ILocalService {
         return localConverter.entityToModel(localRepository.findById(id));
     }
 
- 
-
     @Override
     public LocalModel insertOrUpdate(LocalModel localModel) {
 
-  
     	GerenteModel g = gerenteService.findByIdPersona(localModel.getGerente().getId());
     	
-    	
-    	
         Local local = localRepository.save(localConverter.modelToEntity(localModel));
-        
-        
-        
-        
-  
         
         return localConverter.entityToModel(local);
     }
@@ -87,37 +76,23 @@ public class LocalService implements ILocalService {
         }
     }
     
-    
-    
     public LocalModel localMasCercano(LocalModel localModel) {
- 	   
- 	   
+ 	      
  	   LocalModel l = new LocalModel();
  	   
  	   double distancia = 100000000;
  	   
- 	   
  	   for (Local local: getAll()) {
- 		   
- 		   
+ 		      
  		   if(local.getId()!=localModel.getId()) {
  		   
  		   if(localModel.calcularDistancia(local.getLatitud(), local.getLongitud())<distancia) {
  			   
  			   distancia = localModel.calcularDistancia(local.getLatitud(), local.getLongitud());
- 			   l = localConverter.entityToModel(local);
- 			   
+ 			   l = localConverter.entityToModel(local);   
  		   }
- 		   
- 		   }
- 		   
- 		   
+ 		 }
  	   }
- 	   
- 	   
     	return l;
     }
-    
-    
-    
 }

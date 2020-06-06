@@ -6,17 +6,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import unla.proyectos.version2.converters.PedidoConverter;
-import unla.proyectos.version2.entities.Producto;
-import unla.proyectos.version2.entities.Cliente;
 import unla.proyectos.version2.entities.Pedido;
-import unla.proyectos.version2.models.ProductoModel;
 import unla.proyectos.version2.models.PedidoModel;
 import unla.proyectos.version2.repositories.IPedidoRepository;
 import unla.proyectos.version2.services.IPedidoService;
-
-
-
-
 
 @Service("pedidoService")
 public class PedidoService implements IPedidoService {
@@ -58,15 +51,12 @@ public class PedidoService implements IPedidoService {
 		System.out.println(pedidoModel.getCantidad());
 		
 		Pedido p = pedidoConverter.modelToEntity(pedidoModel);
-		
 
-		
 		//System.out.println("-----" +p.getPersona().toString());
 
 		pedidoRepository.flush();
 		Pedido pedido = pedidoRepository.saveAndFlush(p);
-		
-		
+
 		return pedidoConverter.entityToModel(pedido);
 	}
 	
@@ -79,7 +69,6 @@ public class PedidoService implements IPedidoService {
 		Pedido pedido = pedidoRepository.save(pedidoConverter.modelToEntity(pedidoModel));
 		return pedidoConverter.entityToModel(pedido);
 	}
-	
 	
 	@Override
 	public boolean remove(long id) {
@@ -100,10 +89,5 @@ public class PedidoService implements IPedidoService {
 	//public PedidoModel findByCliente(Cliente cliente) {
 	//	return pedidoConverter.entityToModel(pedidoRepository.findByCliente(cliente));
 	//}
-	
-	
-	
-
-	
 	
 }

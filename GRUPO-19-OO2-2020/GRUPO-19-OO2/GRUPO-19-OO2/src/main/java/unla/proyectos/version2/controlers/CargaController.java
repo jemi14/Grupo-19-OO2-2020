@@ -1,8 +1,5 @@
 package unla.proyectos.version2.controlers;
 
-
-
-
 import java.time.LocalDate;
 import java.time.Month;
 import java.time.temporal.ChronoUnit;
@@ -32,11 +29,6 @@ import unla.proyectos.version2.services.IProductoService;
 import unla.proyectos.version2.services.IStockService;
 import unla.proyectos.version2.services.IVendedorService;
 
-
-
-
-
-
 @Controller
 @RequestMapping("/cargar")
 public class CargaController {
@@ -61,19 +53,14 @@ public class CargaController {
 	@Qualifier("localService")
 	private ILocalService localService;
 	
-	
 	@Autowired
 	@Qualifier("stockService")
 	private IStockService stockService;
 	
-
-	;
 	
 	@GetMapping("/")
 	public RedirectView redirectToHomeIndex() {
 		
-		
-
 		GerenteModel g1 = new GerenteModel("Griselda", "Benitez", null, 1111111,  120000 );
 		GerenteModel g2 = new GerenteModel("Leandro", "Haugg", null, 1222222,  220000 );
 		GerenteModel g3 = new GerenteModel("Ramiro", "Benitez", null, 133333, 320000 );
@@ -93,7 +80,7 @@ public class CargaController {
 		
 		ProductoModel p1 = new ProductoModel( "EL mas rico, lo vale...", 123.5f,"Chocolate");
 		ProductoModel p2 = new ProductoModel( "Baratito pero delicioso", 13.5f,"Kinder");
-		ProductoModel p3 = new ProductoModel( "Duro pero rico", 11f,"Caramelo");
+		ProductoModel p3 = new ProductoModel( "Duro", 11f,"Caramelo");
 		ProductoModel p4 = new ProductoModel( "Sabor del conurbano", 15.1f,"Helado");
 		ProductoModel p5 = new ProductoModel( "1kg de las mejores pepas", 20f,"Pepas");
 		
@@ -105,8 +92,6 @@ public class CargaController {
 		
 		productoService.insert(p1);productoService.insert(p2);productoService.insert(p3);
 		productoService.insert(p4);productoService.insert(p5);
-		
-		
 		
 		
 		LocalModel local1 = new LocalModel("Banfield", "Rodriguez", 1111,1234l,-34.42f,-58.23f,gerenteService.findByIdPersona(7));
@@ -179,9 +164,6 @@ public class CargaController {
 		StockModel s30 = new StockModel(productoService.findById(5),localService.findById(6),14,fechas.get(29));
 		
 		
-	
-		
-		
 		stockService.insert(s1);stockService.insert(s2);stockService.insert(s3);
 		stockService.insert(s4);stockService.insert(s5);stockService.insert(s6);
 		stockService.insert(s7);stockService.insert(s8);
@@ -194,18 +176,7 @@ public class CargaController {
 		stockService.insert(s25);stockService.insert(s26);stockService.insert(s27);
 		stockService.insert(s28);stockService.insert(s29);stockService.insert(s30);
 	
-				
-				
-		
-
-				
-		
-		
-		
-		
-		
-		
-		
+			
 		return new RedirectView(ViewRouteHelper.PRODUCTOS_ROOT);
 	}
 }

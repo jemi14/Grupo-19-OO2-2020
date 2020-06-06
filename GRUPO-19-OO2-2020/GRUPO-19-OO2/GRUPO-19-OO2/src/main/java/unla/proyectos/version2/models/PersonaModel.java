@@ -1,7 +1,6 @@
 package unla.proyectos.version2.models;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -15,7 +14,6 @@ public class PersonaModel {
 	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaDeNacimiento;
-	
 	
 	private Set<PedidoModel> pedidos=new HashSet<PedidoModel>();
 	
@@ -36,16 +34,13 @@ public class PersonaModel {
 	
 	
 	public PersonaModel( String nombre, String apellido,LocalDate fechaDeNacimiento, long dni) {
-		super();
-		
+		super();	
 		this.nombre = nombre;
 		this.apellido = apellido;
 		this.fechaDeNacimiento = fechaDeNacimiento;
 		this.dni = dni;
 	}
 	
-
-
 	public long getId() {
 		return id;
 	}
@@ -110,11 +105,4 @@ public class PersonaModel {
 		this.pedidos = pedidos;
 		this.dni = dni;
 	}
-	
-	
-	
-	
-	
-	
-	
 }

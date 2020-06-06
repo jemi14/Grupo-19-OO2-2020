@@ -1,7 +1,6 @@
 package unla.proyectos.version2.models;
 
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -10,8 +9,6 @@ public class ClienteModel extends PersonaModel{
 	
     private Set<PedidoModel> pedidos=new HashSet<PedidoModel>();
 	
-	
-
 	public ClienteModel(long id, String nombre, String apellido,LocalDate  fechaDeNacimiento, long dni, String mail) {
 		super(id, nombre, apellido, fechaDeNacimiento, dni);
 		this.mail = mail;
@@ -36,7 +33,6 @@ public class ClienteModel extends PersonaModel{
 		this.mail = mail;
 	}
 	
-	
 	public ClienteModel( ) {
 		super();
 		;
@@ -54,15 +50,4 @@ public class ClienteModel extends PersonaModel{
 	public void setPedidos(Set<PedidoModel> pedidos) {
 		this.pedidos = pedidos;
 	}
-
-
-
-	
-	
-
-
-	
-	
-	
-	
 }

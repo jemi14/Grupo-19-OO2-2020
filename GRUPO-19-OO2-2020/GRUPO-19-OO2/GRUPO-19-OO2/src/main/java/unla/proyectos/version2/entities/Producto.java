@@ -2,17 +2,11 @@ package unla.proyectos.version2.entities;
 
 import org.hibernate.annotations.CreationTimestamp;
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
@@ -22,8 +16,6 @@ public class Producto{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
-	
-
 	
 	@Column(name="descripcion", length=100)
 	private String descripcion;
@@ -37,9 +29,6 @@ public class Producto{
 	
 	@Column(name="nombre", length=45)
 	private String nombre;
-	
-	
-
 	
 	public Producto() {}
 
@@ -65,8 +54,6 @@ public class Producto{
 	protected void setId(long id) {
 		this.id = id;
 	}
-
-
 
 	public String getDescripcion() {
 		return descripcion;
@@ -106,8 +93,6 @@ public class Producto{
 				+ ", fechaAlta=" + fechaAlta + ", nombre=" + nombre +  "]";
 	}
 
-	
-
 	public Producto(long id, String descripcion, float precioUnitario, LocalDate fechaAlta, String nombre) {
 		super();
 		this.id = id;
@@ -117,11 +102,4 @@ public class Producto{
 		this.nombre = nombre;
 	
 	}
-
-
-	
-	
-	
-	
-
 }

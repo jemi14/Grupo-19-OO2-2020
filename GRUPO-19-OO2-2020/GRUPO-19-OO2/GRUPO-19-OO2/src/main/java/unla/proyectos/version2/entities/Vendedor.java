@@ -1,17 +1,12 @@
 package unla.proyectos.version2.entities;
 
-
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-
-
 
 @Entity
 public class Vendedor extends Persona {
@@ -28,11 +23,9 @@ public class Vendedor extends Persona {
 	@ManyToOne(fetch = FetchType.LAZY)
 	// normalmente nullable es igual a false, en este caso se deja como true porque el ejemplo es simple
 	@JoinColumn(name="local_id", nullable=true)
+	
 	private Local local;
 	
-
-	
-
 	public float getExtra() {
 		return extra;
 	}
@@ -64,8 +57,6 @@ public class Vendedor extends Persona {
 		this.sueldoBasico = sueldoBasico;
 	}
 
-
-
 	public Vendedor(String nombre, String apellido, LocalDate fechaDeNacimiento, long dni, float extra,
 			LocalTime horasPorJornada, float sueldoBasico) {
 		super(nombre, apellido, fechaDeNacimiento, dni);
@@ -78,7 +69,6 @@ public class Vendedor extends Persona {
 		super();
 	
 	}
-	
 	
 	public Vendedor(long id, String nombre, String apellido, LocalDate fechaDeNacimiento, long dni, float extra,
 			LocalTime horasPorJornada, float sueldoBasico) {
@@ -103,15 +93,4 @@ public class Vendedor extends Persona {
 		this.sueldoBasico = sueldoBasico;
 		this.local = local;
 	}
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
 }

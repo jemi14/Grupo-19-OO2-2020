@@ -1,4 +1,5 @@
 package unla.proyectos.version2.services.implementation;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,10 +17,6 @@ import unla.proyectos.version2.models.StockModel;
 import unla.proyectos.version2.repositories.IStockRepository;
 import unla.proyectos.version2.services.IStockService;
 
-
-
-
-
 @Service("stockService")
 public class StockService implements IStockService {
 
@@ -35,12 +32,10 @@ public class StockService implements IStockService {
 	@Qualifier("productoService")
 	private ProductoService productoService;
 	
-	
 	@Autowired
 	@Qualifier("localService")
 	private LocalService localService;
 
-	
 	@Override
 	public List<Stock> getAll() {
 		return stockRepository.findAll();
@@ -60,8 +55,7 @@ public class StockService implements IStockService {
 		Stock stock = stockRepository.save(stockConverter.modelToEntity(stockModel));
 		return stockConverter.entityToModel(stock);
 	}
-	
-	
+		
 	@Override
 	public boolean remove(long id) {
 		try {
@@ -82,29 +76,23 @@ public class StockService implements IStockService {
 		return stockConverter.entityToModel(stockRepository.findByProducto(producto));
 	}
 	
-	
-	
 	public int totalPorProducto(ProductoModel productoModel) {
-		
-		
-		int cantidad = 0; 
-		
-		for (Stock stock: getAll()) {
 			
-			if(stock.getProducto().getNombre().equals(productoModel.getNombre())) {
+	int cantidad = 0; 
+		
+	for (Stock stock: getAll()) {
+			
+	if(stock.getProducto().getNombre().equals(productoModel.getNombre())) {
 				cantidad = cantidad + stock.getCantidad();
-			}
-			
+			}		
 		}
 		
 		return cantidad;
 	}
 	
 	
-	
 	public int totalPorProductoYLocal(ProductoModel productoModel, LocalModel localModel) {
-		
-		
+			
 		int cantidad = 0; 
 		
 		for (Stock stock: getAll()) {
@@ -112,22 +100,15 @@ public class StockService implements IStockService {
 			if(stock.getProducto().getNombre().equals(productoModel.getNombre())&&
 					stock.getLocal().getId()==(localModel.getId())) {
 				
-				cantidad = cantidad + stock.getCantidad();
-				
-			}
-			
+				cantidad = cantidad + stock.getCantidad();	
+			}	
 		}
-		
 		return cantidad;
 	}
 	
-	
 	public PedidoModel calculoDescripcionPedido(PedidoModel pedidoModel) {
 		
-		PedidoModel p = pedidoModel;
-	
-		
-		
+		PedidoModel p = pedidoModel;	
 		//Si se pidio mas de lo que teniamos
 		if(p.getCantidad()>totalPorProducto(p.getProducto())) {
 			
@@ -136,27 +117,20 @@ public class StockService implements IStockService {
 			
 			//solo en este caso no tomo el pedido.
 			p.setTomado(false);
-			
-		}else { //Si lo pedido es menor a lo que tenemos
-			
-			
+		}
+		else { //Si lo pedido es menor a lo que tenemos
+				
 			//Si nos alcanza lo que hay en la sucursal seleccionada
 			
 			if(pedidoModel.getCantidad()<=totalPorProductoYLocal(p.getProducto(), p.getLocal())) {
 				
-				p.setDescripcion("Contamos con su pedido en la sucursal elegida, pronto estara disponible su pedido. Se realizara la entrega en los proximos 7 días.");
+			    p.setDescripcion("Contamos con su pedido en la sucursal elegida, pronto estara disponible su pedido. Se realizara la entrega en los proximos 7 días.");
 				p.setFechaEntrega(p.getFechaPedido().plusDays(7));
-				
-				
 				
 				//Resta cantidades a los stocks "LOTES" de la sucursal.
 				reservarStock(stockPorLocalYProducto(pedidoModel.getLocal(),pedidoModel.getProducto()), pedidoModel.getCantidad());	
 				
-				
-				
-				
 			}
-			
 			
 			else //Si necesitamos de mas Sucursales
 			{
@@ -166,7 +140,6 @@ public class StockService implements IStockService {
 				
 				//Hago lo mismo pero la cantidad de veces que necesite, avanzando siempre a la
 				//Sucursal mas cercana
-			
 				
 				ArrayList<StockModel> lista = stockPorLocalYProducto(pedidoModel.getLocal(),pedidoModel.getProducto());
 				int cantidadAReservar = pedidoModel.getCantidad();
@@ -187,96 +160,48 @@ public class StockService implements IStockService {
 					//Busco el local mas cercano
 					LocalModel localCercano = localService.localMasCercano(lista.get(0).getLocal());
 					lista = stockPorLocalYProducto(localCercano, lista.get(0).getProducto());
-					
-					
-					
-				}
-				
+						}
 				}//cierra el while
-				
-				
-				
 			}
-			
-			
 		}
-		
-		
-		
-		
 		return p;
 	}
 	
-	
-	
 	public ArrayList<StockModel> stockPorLocal(LocalModel localModel){
-		
-		
+	
 		ArrayList<StockModel> stocks =  new ArrayList<StockModel>();
-		
-		
+			
 		for(Stock s: getAll()) {
-			
-			
+					
 			if(s.getLocal().getLocalidad().equals(localModel.getLocalidad())) {
-				
-				
+					
 				stocks.add(stockConverter.entityToModel(s));
-				
 			}
-			
 		}
-		
-		
-		
-		
 		return stocks;
-		
 	}
 	
-	
-	
 	public ArrayList<StockModel> stockPorLocalYProducto(LocalModel localModel, ProductoModel productoModel){
-		
-		
+			
 		ArrayList<StockModel> stocks =  new ArrayList<StockModel>();
 		
 		stocks = stockPorLocal(localModel);
 		
-		
 		ArrayList<StockModel> stocksRetorno =  new ArrayList<StockModel>();
-		
 		
 		for(StockModel s: stocks) {
 			
 			if(s.getProducto().getNombre()==productoModel.getNombre()) {
-				
-				
+						
 				stocksRetorno.add(s);
-				
 			}
-			
-			
 		}
-		
-		
-
-		
 		return stocksRetorno;
-		
 	}
 	
-	
-	
-	
-	
 	public int reservarStock(ArrayList<StockModel> stocks, int cantidad) {
-		
-		
-	
-		
+			
 		int restaReservar = cantidad;
-		
 		int elementosLista = stocks.size();
 		int cantidadRecorrida = 0 ; 
 		
@@ -284,10 +209,8 @@ public class StockService implements IStockService {
 		
 		while(restaReservar > 0  &&  cantidadRecorrida<elementosLista) {
 			
-			
 			for(StockModel s: stocks) {
-				
-				
+					
 				//Si alcanza lo que hay en el stock s
 				if(s.getCantidad()>=restaReservar) {
 					
@@ -298,11 +221,8 @@ public class StockService implements IStockService {
 					
 					Update(s);
 					
-					cantidadRecorrida++;
-					
+					cantidadRecorrida++;	
 				}
-				
-				
 				
 				//Si ese stock no alcanza
 				
@@ -312,30 +232,15 @@ public class StockService implements IStockService {
 					s.setCantidad(0);
 					
 					System.out.println("Este stock tengo que updatear" +s);
-					
-					
+				
 					Update(s);
-					
-					
-					cantidadRecorrida++;
-					
+				
+					cantidadRecorrida++;		
 				}
-				
-				
-				
 			}
-			
-			
 		}//Cierra el while
-		
-		
-		
 		
 		return restaReservar;
 	}//cierra el void
-	
-	
-	
-	
 	
 }

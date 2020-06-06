@@ -1,7 +1,6 @@
 package unla.proyectos.version2.services.implementation;
 
 import java.util.List;
-import java.util.Vector;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -12,8 +11,6 @@ import unla.proyectos.version2.entities.Vendedor;
 import unla.proyectos.version2.models.VendedorModel;
 import unla.proyectos.version2.repositories.IVendedorRepository;
 import unla.proyectos.version2.services.IVendedorService;
-
-
 
 @Service("vendedorService")
 public class VendedorService implements IVendedorService{
@@ -55,7 +52,6 @@ public class VendedorService implements IVendedorService{
         return vendedorConverter.entityToModel(vendedor);
     }
     
-
     @Override
     public boolean remove(long id){
         try{

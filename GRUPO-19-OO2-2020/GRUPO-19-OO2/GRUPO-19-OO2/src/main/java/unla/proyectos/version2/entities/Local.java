@@ -5,8 +5,6 @@ import java.util.Set;
 
 import javax.persistence.*;
 
-
-
 @Entity
 @Table(name="local")
 public class Local {
@@ -37,7 +35,6 @@ public class Local {
 	dasdas@JoinColumn(name = "gerenteId", referencedColumnName = "id")
 	*/
 	
-	
 	//@OneToOne(fetch = FetchType.LAZY)
 	//@OneToOne(cascade = CascadeType.MERGE)
 	
@@ -60,21 +57,13 @@ public class Local {
 	@OneToOne(cascade = CascadeType.MERGE)
 	private Gerente gerente;
 
-	  @OneToMany(mappedBy = "local",cascade = CascadeType.ALL, orphanRemoval = true )
+	@OneToMany(mappedBy = "local",cascade = CascadeType.ALL, orphanRemoval = true )
 	private Set<Vendedor> vendedores = new HashSet<Vendedor>();
 
-	
 	@OneToMany(fetch = FetchType.LAZY, mappedBy="local")
 	private Set<Stock> stocks = new HashSet<Stock>();;
 	
-
-
-	
-	
-	
 	public Local() {}
-
-
 
 	public Local(long id, String localidad, String calle, int numero, long telefono, float latitud, float longitud,
 			Gerente gerente, Set<Vendedor> vendedores, Set<Stock> stocks) {
@@ -105,8 +94,6 @@ public class Local {
 	
 	}
 	
-	
-
 	public Local(long id, String localidad, String calle, int numero, long telefono, float latitud, float longitud) {
 		super();
 		this.id = id;
@@ -118,7 +105,6 @@ public class Local {
 		this.longitud = longitud;
 	
 	}
-
 
 	public long getId() {
 		return id;
@@ -200,22 +186,10 @@ public class Local {
 		this.stocks = stocks;
 	}
 
-
-
-
-
 	@Override
 	public String toString() {
 		return "Local [id=" + id + ", localidad=" + localidad + ", calle=" + calle + ", numero=" + numero
 				+ ", telefono=" + telefono + ", latitud=" + latitud + ", longitud=" + longitud + ", gerente=" + gerente
 				+ ", vendedores=" + vendedores + ", stocks=" + stocks + "]";
-	}
-
-
-
-
-	
-	
-
-	
+	}	
 }

@@ -9,12 +9,12 @@ import org.springframework.web.servlet.ModelAndView;
 import unla.proyectos.version2.helpers.ViewRouteHelper;
 
 @Controller
-@RequestMapping("/")
-public class InicioController {
+@RequestMapping("/login")
+public class LoginController {
 	
     @GetMapping("")
     public ModelAndView index(){
-        ModelAndView mAV = new ModelAndView(ViewRouteHelper.INDEX);
+        ModelAndView mAV = new ModelAndView(ViewRouteHelper.LOGIN);
         
     
         return mAV;

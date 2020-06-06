@@ -1,6 +1,5 @@
 package unla.proyectos.version2.services.implementation;
 
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
@@ -47,17 +46,11 @@ public class ProductoService implements IProductoService {
     @Override
     public ProductoModel insert(ProductoModel productoModel) {
     	
-    	
     	Producto producto =  productoRepository.save(productoConverter.modelToEntity(productoModel));
     	 
-    	
-    	
         return productoConverter.entityToModel(producto);
     }
 
-    
-    
-    
     @Override
     public ProductoModel update(ProductoModel productoModel) {
 

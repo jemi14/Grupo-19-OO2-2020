@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 import unla.proyectos.version2.entities.Cliente;
 import unla.proyectos.version2.models.ClienteModel;
 
-
-
 @Component("clienteConverter")
 public class ClienteConverter {
 	

@@ -1,21 +1,13 @@
 package unla.proyectos.version2.entities;
 
 import java.time.LocalDate;
-import java.util.HashSet;
-import java.util.Set;
-
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 import javax.persistence.InheritanceType;
-import javax.persistence.OneToMany;
-
-
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED) //See more in https://www.baeldung.com/hibernate-inheritance
@@ -31,15 +23,10 @@ public class Persona {
 	@Column(name="apellido", nullable=false, length=30)
 	private String apellido;
 	
-	
 	private LocalDate fechaDeNacimiento;
 	
 	@Column(name="dni")
 	private long dni;
-	
-	
-
-	
 			
 	public Persona() {}
 
@@ -107,21 +94,4 @@ public class Persona {
 	public void setIdPersona(long idPersona) {
 		this.idPersona = idPersona;
 	}
-
-	
-	
-	
-	
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

@@ -1,7 +1,5 @@
 package unla.proyectos.version2.controlers;
 
-
-
 import java.time.LocalDate;
 import java.util.ArrayList;
 
@@ -65,31 +63,23 @@ public class AbmsController {
         mAV.addObject("productos", productoService.getAll());
 		mAV.addObject("productoModel", new ProductoModel());
 		
-		 mAV.addObject("stocks", stockService.getAll());
-		 mAV.addObject("stockModel", new StockModel());
-		 
-		 
-		 mAV.addObject("locales", localService.getAll());
-		 mAV.addObject("localModel", new LocalModel());
-		 
-		
-		 
-		 mAV.addObject("gerentes", gerenteService.getAll());
-		 mAV.addObject("gerenteModel", new GerenteModel());
-		 
-	    	
+		mAV.addObject("stocks", stockService.getAll());
+		mAV.addObject("stockModel", new StockModel());
+		  
+		mAV.addObject("locales", localService.getAll());
+		mAV.addObject("localModel", new LocalModel());
+		  
+		mAV.addObject("gerentes", gerenteService.getAll());
+		mAV.addObject("gerenteModel", new GerenteModel());
+		 	
 	    mAV.addObject("clientes", clienteService.getAll());
 	    mAV.addObject("clienteModel", new ClienteModel());
 	    	
-	     mAV.addObject("vendedores", vendedorService.getAll());
+	    mAV.addObject("vendedores", vendedorService.getAll());
 	    mAV.addObject("vendedorModel", new VendedorModel());
 		 
-	
-		
         return mAV;
     }
-
-
 
     
     ///////////////////////PRODUCTO//////////////////////////////////////////////////////////////////////////
@@ -99,8 +89,6 @@ public class AbmsController {
         return new RedirectView(ViewRouteHelper.PRODUCTOS_ROOT);
     }
     
-   
-
     @GetMapping("/{id}")
     public ModelAndView get(@PathVariable("id") long id) {
         ModelAndView mAV = new ModelAndView(ViewRouteHelper.PRODUCTOS_UPDATE);
@@ -121,7 +109,6 @@ public class AbmsController {
     }
     
     ////////////////////////////////////////////////////////////////////////////////////
-    
     
     /////////////////////////////////////STOCK//////////////////////////////////////////////
     @PostMapping("/agregarstockyvolveraindex")
@@ -152,7 +139,6 @@ public class AbmsController {
     
     ////////////////////////////////////////////////////////////////////////////
     
-    
     /////////////////////////////////////Local//////////////////////////////////////////////
     @PostMapping("/agregarlocalyvolveraindex")
     public RedirectView create(@ModelAttribute("localModel") LocalModel localModel){
@@ -175,7 +161,6 @@ public class AbmsController {
     
     ////////////////////////////////////////////////////////////////////////////
     
-    
     /////////////////////////////////////Local//////////////////////////////////////////////
     
     //Esto ya esta bien resuelto en sucursal, lo dejo solo para que no se rompa una vista, luego lo borrare
@@ -185,7 +170,7 @@ public class AbmsController {
     	//System.out.println(localModel.toString());
     	LocalModel l = localService.findById( localModel.getId());
     	
-    	ArrayList <String>  distanciasDeSucursales= new ArrayList <String>();
+    	ArrayList <String>  distanciasDeSucursales= new ArrayList <String>(); //esta es la lista de string
     	
     	String texto = "El local de " +l.getLocalidad();
     	distanciasDeSucursales.add(texto);
@@ -200,23 +185,19 @@ public class AbmsController {
     		
     	}
     	
-    
     	System.out.println(l.toString());
     	//localModel.setGerente(gerenteService.findById(localModel.getGerente().getId()));
         //localService.insert(localModel);
     	ModelAndView mAV = new ModelAndView(ViewRouteHelper.DISTANCIA_INDEX);
     	mAV.addObject("distanciasDeSucursales", distanciasDeSucursales);
     	
-    	
-   	 mAV.addObject("locales", localService.getAll());
+    	mAV.addObject("locales", localService.getAll());
 
         return mAV;
     }
     
-    
-    ////////////////////////////////////////////////////////////////////////////
-    
-		    
+        ////////////////////////////////////////////////////////////////////////////
+    	    
 		/////////////////////////////////////ABM GENRENTES////////////////////////////////////////////////
 		@PostMapping("/agregargerenteyvolveraindex")
 		public RedirectView create(@ModelAttribute("gerenteModel") GerenteModel gerenteModel){
@@ -245,9 +226,7 @@ public class AbmsController {
 		return new RedirectView(ViewRouteHelper.PERSONAS_ROOT);
 		}
 		/////////////////////////////////////FIN ABM GERENTES////////////////////////////////////////////////
-		
-		
-		
+			
 		/////////////////////////////////////ABM CLIENTES////////////////////////////////////////////////
 		@PostMapping("/agregarclienteyvolveraindex")
 		public RedirectView create(@ModelAttribute("clienteModel") ClienteModel clienteModel){
@@ -276,8 +255,6 @@ public class AbmsController {
 		return new RedirectView(ViewRouteHelper.PERSONAS_ROOT);
 		}
 		/////////////////////////////////////FIN ABM CLIENTES////////////////////////////////////////////////
-		
-		
 		
 		/////////////////////////////////////ABM Vendedores////////////////////////////////////////////////
 		@PostMapping("/agregarvendedoryvolveraindex")
@@ -308,9 +285,4 @@ public class AbmsController {
 		}
 		/////////////////////////////////////FIN ABM Vendedores////////////////////////////////////////////////
 
-    
-    
-    
-    
-    
 }

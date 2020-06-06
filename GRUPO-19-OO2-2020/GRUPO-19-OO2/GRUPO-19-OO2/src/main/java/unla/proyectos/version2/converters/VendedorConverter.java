@@ -5,8 +5,6 @@ import org.springframework.stereotype.Component;
 import unla.proyectos.version2.entities.Vendedor;
 import unla.proyectos.version2.models.VendedorModel;
 
-
-
 @Component("vendedorConverter")
 public class VendedorConverter {
 

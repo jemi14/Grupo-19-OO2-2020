@@ -1,7 +1,5 @@
 package unla.proyectos.version2.services;
 
-
-
 import java.util.List;
 
 import unla.proyectos.version2.entities.Producto;
@@ -16,8 +14,5 @@ public interface IProductoService {
     public ProductoModel insert(ProductoModel productoModel);
     public ProductoModel update(ProductoModel productoModel);
     public boolean remove(long id);
-    
-    
-   
     
 }

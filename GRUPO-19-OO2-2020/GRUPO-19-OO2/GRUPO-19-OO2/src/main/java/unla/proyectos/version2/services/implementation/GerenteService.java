@@ -12,8 +12,6 @@ import unla.proyectos.version2.models.GerenteModel;
 import unla.proyectos.version2.repositories.IGerenteRepository;
 import unla.proyectos.version2.services.IGerenteService;
 
-
-
 @Service("gerenteService")
 public class GerenteService implements IGerenteService{
 	
@@ -29,8 +27,6 @@ public class GerenteService implements IGerenteService{
 	public List<Gerente> getAll() {
 		return gerenteRepository.findAll();
 	}
-	
-	
 
 	@Override
 	public GerenteModel findByIdPersona(long idPersona) {
@@ -71,7 +67,6 @@ public class GerenteService implements IGerenteService{
         }
 	}
 	
-	
 	public long maximoId() {
 		
 		long maximo = -1;
@@ -84,6 +79,4 @@ public class GerenteService implements IGerenteService{
 		
 		return maximo;
 	}
-	
-
 }

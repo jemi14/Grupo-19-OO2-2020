@@ -5,7 +5,6 @@ import org.springframework.stereotype.Component;
 import unla.proyectos.version2.entities.Persona;
 import unla.proyectos.version2.models.PersonaModel;
 
-
 @Component("personaConverter")
 public class PersonaConverter {
 	public PersonaModel entityToModel(Persona persona){

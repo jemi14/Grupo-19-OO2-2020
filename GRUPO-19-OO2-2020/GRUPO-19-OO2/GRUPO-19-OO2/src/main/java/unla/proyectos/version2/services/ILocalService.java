@@ -1,7 +1,5 @@
 package unla.proyectos.version2.services;
 
-
-
 import java.util.List;
 
 import unla.proyectos.version2.entities.Local;

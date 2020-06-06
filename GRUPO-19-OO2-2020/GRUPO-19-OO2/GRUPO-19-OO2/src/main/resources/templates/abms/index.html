@@ -12,17 +12,10 @@
 <link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
 <link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
 <link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/animate.css">
-
-
 <link rel="stylesheet" type="text/css" href="/styles/main_styles.css">
 <link rel="stylesheet" type="text/css" href="/styles/responsive.css">
 
-
-
-
 </head>
-
-
 
 <body>
 
@@ -41,16 +34,14 @@
 						<div class="phone">Desarrollado por el grupo 19</div>
 						<div class="social">
 							<ul class="social_list">
-								<li class="social_list_item"><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
-								<li class="social_list_item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-								<li class="social_list_item"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
-								<li class="social_list_item"><a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a></li>
-								<li class="social_list_item"><a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a></li>
-								<li class="social_list_item"><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="https://www.facebook.com/unlaoficial"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="https://twitter.com/UNLaOficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="https://www.instagram.com/unlaoficial/?hl=es-la"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="https://github.com/jemi14/Grupo-19-OO2-2020"><i class="fa fa-github" aria-hidden="true"></i></a></li>
 							</ul>
 						</div>
 						<div class="user_box ml-auto">
-							<div class="user_box_login user_box_link"><a href="#">Iniciar</a></div>
+							<div class="user_box_login user_box_link"><a href="/login/">Iniciar Sesión</a></div>
 							<div class="user_box_register user_box_link"><a href="#">Registrarte</a></div>
 						</div>
 					</div>
@@ -65,7 +56,7 @@
 				<div class="row">
 					<div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
 						<div class="logo_container">
-							<div class="logo"><a href="#"><img src="/images/logo.png" alt="">UNla-Stock19</a></div>
+							<div class="logo"><a href="#"><img src="/images/logo_unla.jpg" alt="">UNLa-Stock19</a></div>
 						</div>
 						<div class="main_nav_container ml-auto">
 							<ul class="main_nav_list">
@@ -129,21 +120,14 @@
 						</div>
 					</div>
 				</div>
-
-				
-
 			</div>
-			
-			
 		</div>
-
 	</div>
 
 	<!-- Panel ABM -->
 
 	<div class="search">
 		
-
 		<!-- ABM s -->
 		
 		<div class="container fill_height">
@@ -186,27 +170,16 @@
 								<input type="number" step="any" th:field="*{precioUnitario}" class="destination search_input" required="required">
 							</div>
 							
-							
 							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
 						</form>
-						
-					
-						
 						
 						</div> <!-- Cierra el panel producto-->
 						
 						
-						
-						
-						
-						
-				
-
 						<!-- FORM - STOCK Insertar -->
 
 					<div class="search_panel">
 						<form action="#" th:action="@{/abms/agregarstockyvolveraindex}" th:object="${stockModel}" method="post" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							
 							
 							
 							<div class="search_item">
@@ -215,9 +188,7 @@
 							</div>
 							
 		
-					    
-										
-										
+					    		
 							<div class="search_item">
 								<div>Productos</div>
 								<select placeholder="Producto" th:field="*{producto.id}"  class="dropdown_item_select search_input">
@@ -237,27 +208,14 @@
 								</select>
 							</div>			
 										
-										
-				
-				
-							
 							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
 						</form>
-						
-					
-						
-						
-						</div> <!-- Cierra Stock-->
-						
-					
-					
-					
-					
 
-					<!-- LOcal -->
+						</div> <!-- Cierra Stock-->
+
+					<!-- Local -->
 						<div class="search_panel">
 						<form action="#" th:action="@{/abms/agregarlocalyvolveraindex}" th:object="${localModel}" method="post" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							
 							
 							<div class="search_item">
 								<div>Localidad</div>
@@ -279,8 +237,6 @@
 								<input type="number" step="any"  th:field="*{longitud}" class="destination search_input" required="required">
 							</div>
 							
-							
-							
 							<div class="search_item">
 								<div>Latitud</div>
 								<input type="number"  step="any" th:field="*{latitud}" class="destination search_input" required="required">
@@ -290,10 +246,6 @@
 								<div>Telefono</div>
 								<input type="number" th:field="*{telefono}" class="destination search_input" required="required">
 							</div>
-							
-		
-					    
-										
 										
 							<div class="search_item">
 								<div>Gerente del local</div>
@@ -304,17 +256,10 @@
 								</select>
 							</div>			
 										
-										
-				
-				
-							
 							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
 						</form>
 						
-					
-						
 						</div> <!-- LOCAL-->
-						
 						
 						<div class="search_panel">
 					
@@ -343,17 +288,10 @@
 							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
 						</form>
 						
-					
-						
-						
 						</div> <!-- Gerente-->
-						
-						
-						
 						
 						<div class="search_panel">
 						<form action="#" th:action="@{/abms/agregarclienteyvolveraindex}" th:object="${clienteModel}" method="post" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							
 							
 							<div class="search_item">
 								<div>Nombre:</div>
@@ -376,21 +314,13 @@
 								<input type="number"  th:field="*{dni}" class="destination search_input" required="required">
 							</div>
 										
-							
-										
-				
-				
-							
 							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
 						</form>
 						
-					
-						
-						
 						</div> <!-- Cierra CLIENTE-->
 						
-						
-						
+						</div> <!-- VENDEDOR-->
+				
 						<div class="search_panel">
 						<form action="#" th:action="@{/abms/agregarvendedoryvolveraindex}" th:object="${vendedorModel}" method="post" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
 							
@@ -414,8 +344,6 @@
 								<input type="number" step="any" th:field="*{extra}" class="destination search_input" required="required">
 							</div>
 							
-							
-							
 							<div class="search_item">
 								<div>DNI</div>
 								<input type="number"  th:field="*{dni}" class="destination search_input" required="required">
@@ -424,27 +352,12 @@
 							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
 						</form>
 						
-					
-						
-						
 						</div> <!-- Cierra el panel VENDEDOR-->
 						
-						
-						
-						
-						
-						
-						
-						
 						<div class="search_panel">
-					
-							
+										
 						<form action="#" th:action="@{/abms/distancias}" th:object="${localModel}" method="post" id="search_form_7" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
-							
-							
-							
-										
-										
+									
 							<div class="search_item">
 								<div>DISTANCIA CON: </div>
 								<select placeholder="localModel" th:field="*{id}"  class="dropdown_item_select search_input">
@@ -453,34 +366,12 @@
 					                    th:value="${l.id}"></option>
 								</select>
 							</div>	
-							
-							
-													
-									
-				
-				
-							
+												
 							<button type="submit" class="button search_button">Calcular distancias<span></span><span></span><span></span></button>
 						</form>
 						
-						
-
-					
-						
-						
 						</div> <!-- DISTANCIAS-->
-						
-						
-						
-						
-						
-						
-						
-						
-						
-						
-					
-
+	
 					<!-- Search Panel -->
 
 					<div class="search_panel">
@@ -554,31 +445,13 @@
 							<button class="button search_button">Buscar<span></span><span></span><span></span></button>
 						</form>
 					</div>
-					
-					
-					
-						
-					
-				
-								
-										
-						
-					
-					
-					
-					
 				</div>
 			</div>
 		</div>		
 	</div>
 
 
-
-<!-- FIIIIIIIIIIIN        Panel ABM -->
-
-
-
-
+<!-- FIIIIIIIIIIIN  Panel ABM -->
 
 
 <!-- Lista productos -->
@@ -589,9 +462,6 @@
 					<h2 class="section_title">Productos Disponibles</h2>
 				</div>
 			</div>
-			
-			
-			
 			
 			<div  class="row offers_items">
 
@@ -631,20 +501,9 @@
 				</div> 
 				<!-- Fin de ese producto -->
 				
-				
-				
-				
-
-				
-				
-
 			</div>
 		</div>
 	</div>
-	
-	
-	
-	
 	
 	
 	<!-- LISTAS DE EMPLEADOS -->
@@ -685,7 +544,6 @@
 									<div class="offers_link">     
 									
 									<a th:href="@{/abms/gerente/{id}(id=${gerente.id})}">Editar</a> </div>
-									
 								</div>
 							</div>
 						</div>
@@ -694,10 +552,7 @@
 				<!-- Fin de ese producto -->
 			
 			</div>
-			
-			
-			
-			
+
 					<div class="row">
 						<div class="col text-center">
 							<h2 class="section_title">Lista de Vendedores</h2>
@@ -744,8 +599,6 @@
 			</div>
 			
 			
-			
-			
 			<div class="row">
 						<div class="col text-center">
 							<h2 class="section_title">Lista de Clientes</h2>
@@ -789,41 +642,13 @@
 				</div> 
 				<!-- F------------------------------- -->
 				
-				
-				
-				
-
-				
-				
 
 			</div>
 			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+		
 			
 		</div>
 	</div>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-
-		
-						
-		
 
 	<!-- Copyright -->
 
@@ -842,8 +667,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						<div class="footer_nav">
 							<ul class="footer_nav_list">
 								
-								
-								
 							</ul>
 						</div>
 					</div>
@@ -860,10 +683,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 <script src="/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
 <script src="/plugins/easing/easing.js"></script>
 <script src="/js/custom.js"></script>
-
-
-
-
 
 </body>
 

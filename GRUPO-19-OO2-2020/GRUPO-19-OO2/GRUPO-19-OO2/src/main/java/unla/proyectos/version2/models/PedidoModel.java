@@ -10,21 +10,18 @@ public class PedidoModel {
 	private ProductoModel producto;
 	private LocalModel local;
 	private ClienteModel cliente;
-	
-	
-	
 	private int cantidad;
+	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaPedido;
+	
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaEntrega;
+	
 	private boolean pagado;
 	private boolean entregado;
 	private boolean tomado;
-	
 	private String descripcion;
-	
-	
 	
 	public long getId() {
 		return id;
@@ -75,6 +72,7 @@ public class PedidoModel {
 	public void setEntregado(boolean entregado) {
 		this.entregado = entregado;
 	}
+	
 	public PedidoModel(long id, ProductoModel producto, LocalModel local, int cantidad,
 			LocalDate fechaPedido, LocalDate fechaEntrega, boolean pagado, boolean entregado) {
 		super();
@@ -92,8 +90,8 @@ public class PedidoModel {
 	
 	public PedidoModel() {
 		super();
-	
 	}
+	
 	@Override
 	public String toString() {
 		return "PedidoModel [id=" + id + ", producto=" + producto + ", local=" + local + ", cliente=" + cliente
@@ -108,6 +106,7 @@ public class PedidoModel {
 	public void setCliente(ClienteModel cliente) {
 		this.cliente = cliente;
 	}
+	
 	public PedidoModel(long id, ProductoModel producto, LocalModel local, ClienteModel cliente, int cantidad,
 			LocalDate fechaPedido, LocalDate fechaEntrega, boolean pagado, boolean entregado) {
 		super();
@@ -122,12 +121,14 @@ public class PedidoModel {
 		this.entregado = entregado;
 		this.tomado = true;
 	}
+	
 	public String getDescripcion() {
 		return descripcion;
 	}
 	public void setDescripcion(String descripcion) {
 		this.descripcion = descripcion;
 	}
+	
 	public PedidoModel(long id, ProductoModel producto, LocalModel local, ClienteModel cliente, int cantidad,
 			LocalDate fechaPedido, LocalDate fechaEntrega, boolean pagado, boolean entregado, String descripcion) {
 		super();
@@ -143,30 +144,11 @@ public class PedidoModel {
 		this.descripcion = descripcion;
 		this.tomado = true;
 	}
+	
 	public boolean isTomado() {
 		return tomado;
 	}
 	public void setTomado(boolean tomado) {
 		this.tomado = tomado;
 	}
-
-	
-	
-	
-	
-	
-	
-
-	
-
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
 }

@@ -1,7 +1,5 @@
 package unla.proyectos.version2.entities;
 
-
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -20,7 +18,6 @@ import javax.persistence.Table;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-
 @Entity
 @Table(name="stock")
 public class Stock{
@@ -35,19 +32,14 @@ public class Stock{
 	@Column(name="cantidad")
 	private int cantidad;
 	
-
-	
 	@Column(name = "fechaIngreso")
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	private LocalDate fechaIngreso;
-	
 	
 	@ManyToOne(fetch = FetchType.LAZY)
 	// normalmente nullable es igual a false, en este caso se deja como true porque el ejemplo es simple
 	@JoinColumn(name="local_id", nullable=true)
 	private Local local;
-	
-	
 	
 	public Stock() {}
 
@@ -82,8 +74,6 @@ public class Stock{
 		this.cantidad = cantidad;
 	}
 
-	
-
 	public LocalDate getFechaIngreso() {
 		return fechaIngreso;
 	}
@@ -109,22 +99,12 @@ public class Stock{
 		this.local = local;
 	}
 	
-	
 	public Stock( Producto producto, int cantidad, LocalDate fechaIngreso, Local local) {
 		super();
-	
 		this.producto = producto;
 		this.cantidad = cantidad;
 		this.fechaIngreso = fechaIngreso;
 		this.local = local;
 	}
-	
-	
-	
-	
-	
-	
-	
-
 }
 	

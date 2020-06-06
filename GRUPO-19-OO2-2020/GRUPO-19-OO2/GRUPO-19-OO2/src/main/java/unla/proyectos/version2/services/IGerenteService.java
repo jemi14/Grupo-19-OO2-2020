@@ -5,9 +5,6 @@ import java.util.List;
 import unla.proyectos.version2.entities.Gerente;
 import unla.proyectos.version2.models.GerenteModel;
 
-
-
-
 public interface IGerenteService {
 	public List<Gerente> getAll();
    
