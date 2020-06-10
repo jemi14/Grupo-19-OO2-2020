@@ -23,7 +23,7 @@ import unla.proyectos.version2.models.VendedorModel;
 
 
 @Controller
-@RequestMapping("/")
+@RequestMapping("/inicio")
 public class InicioController {
 	
 	
