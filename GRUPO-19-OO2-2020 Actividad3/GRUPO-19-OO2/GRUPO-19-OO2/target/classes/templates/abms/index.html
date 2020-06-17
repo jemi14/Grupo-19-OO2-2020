@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>UNLa Stock - Grupo 19</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travelix Project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="/styles/bootstrap4/bootstrap.min.css">
+<link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="/styles/responsive.css">
+
+</head>
+
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Top Bar -->
+
+		<div class="top_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col d-flex flex-row">
+						<div class="phone">Desarrollado por el grupo 19</div>
+						<div class="social">
+							<ul class="social_list">
+								<li class="social_list_item"><a href="https://www.facebook.com/unlaoficial"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="https://twitter.com/UNLaOficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="https://www.instagram.com/unlaoficial/?hl=es-la"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="https://github.com/jemi14/Grupo-19-OO2-2020"><i class="fa fa-github" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="user_box ml-auto">
+							<div class="user_box_login user_box_link"><a href="/login/">Iniciar Sesión</a></div>
+							<div class="user_box_register user_box_link"><a href="#">Registrarte</a></div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+
+		<!-- Main Navigation -->
+
+		<nav class="main_nav">
+			<div class="container">
+				<div class="row">
+					<div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+						<div class="logo_container">
+							<div class="logo"><a href="#"><img src="/images/logo_unla.jpg" alt="">UNLa-Stock19</a></div>
+						</div>
+						<div class="main_nav_container ml-auto">
+							<ul class="main_nav_list">
+								<li class="main_nav_item"><a href="#">Inicio</a></li>
+								<li class="main_nav_item"><a href="">Nosotros</a></li>
+								<li class="main_nav_item"><a href="">Locales</a></li>
+								<li class="main_nav_item"><a href="">Productos</a></li>
+								<li class="main_nav_item"><a href="c">Contacto</a></li>
+							</ul>
+						</div>
+						
+
+						<form id="search_form" class="search_form bez_1">
+							<input type="search" class="search_content_input bez_1">
+						</form>
+
+						<div class="hamburger">
+							<i class="fa fa-bars trans_200"></i>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</nav>
+
+	</header>
+
+	<div class="menu trans_500">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<div class="menu_close_container"><div class="menu_close"></div></div>
+			<div class="logo menu_logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+			<ul>
+								<li class="main_nav_item"><a href="#">Inicio</a></li>
+								<li class="main_nav_item"><a href="">Nosotros</a></li>
+								<li class="main_nav_item"><a href="">Locales</a></li>
+								<li class="main_nav_item"><a href="">Productos</a></li>
+								<li class="main_nav_item"><a href="">Contactanos</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Home -->
+
+	<div class="home">
+		
+		<!-- Home Slider -->
+
+		<div class="home_slider_container">
+			
+			<div class="owl-carousel owl-theme home_slider">
+
+				<!-- Slider Item -->
+				<div class="owl-item home_slider_item">
+					<!-- Image by https://unsplash.com/@anikindimitry -->
+					<div class="home_slider_background" style="background-image:url(/images/home_slider.jpg)"></div>
+
+					<div class="home_slider_content text-center">
+						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
+							<h1>UNLa</h1>
+							<h1>Stock19</h1>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="/cargar/">CARGAR BD<span></span><span></span><span></span></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Panel ABM -->
+
+	<div class="search">
+		
+		<!-- ABM s -->
+		
+		<div class="container fill_height">
+			<div class="row fill_height">
+				<div class="col fill_height">
+
+					<!-- Search Tabs -->
+
+					<div class="search_tabs_container">
+						<div class="search_tabs d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							<div class="search_tab active d-flex flex-row align-items-center justify-content-lg-center justify-content-start"><span>Productos</span></div>
+							
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">Stock</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">Locales</div>
+						
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">Gerentes</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">Clientes</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">Vendedores</div>
+							<div class="search_tab d-flex flex-row align-items-center justify-content-lg-center justify-content-start">Distancias</div>
+						</div>		
+					</div>
+
+					<!-- FORM - Insertar Producto -->
+
+					<div class="search_panel active">
+						<form action="#" th:action="@{/abms/agregarproductoyvolveraindex}" th:object="${productoModel}" method="post" id="search_form_1" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							
+							<div class="search_item">
+								<div>Descripcion:</div>
+								<input type="text" th:field="*{descripcion}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>Nombre:</div>
+								<input type="text" th:field="*{nombre}" class="destination search_input" required="required"/>
+							</div>
+							
+							<div class="search_item">
+								<div>Precio Unitario</div>
+								<input type="number" step="any" th:field="*{precioUnitario}" class="destination search_input" required="required">
+							</div>
+							
+							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
+						</form>
+						
+						</div> <!-- Cierra el panel producto-->
+						
+						
+						<!-- FORM - STOCK Insertar -->
+
+					<div class="search_panel">
+						<form action="#" th:action="@{/abms/agregarstockyvolveraindex}" th:object="${stockModel}" method="post" id="search_form_2" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							
+							
+							<div class="search_item">
+								<div>Cantidad</div>
+								<input type="number" th:field="*{cantidad}" class="destination search_input" required="required">
+							</div>
+							
+		
+					    		
+							<div class="search_item">
+								<div>Productos</div>
+								<select placeholder="Producto" th:field="*{producto.id}"  class="dropdown_item_select search_input">
+									 <option th:each="p: ${productos}"
+					                    th:text="${p.nombre}"
+					                    th:value="${p.id}"></option>
+								</select>
+							</div>	
+							
+							
+								<div class="search_item">
+								<div>Locales</div>
+								<select placeholder="Local" th:field="*{local.id}"  class="dropdown_item_select search_input">
+									 <option th:each="l: ${locales}"
+					                    th:text="${l.localidad}"
+					                    th:value="${l.id}"></option>
+								</select>
+							</div>			
+										
+							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
+						</form>
+
+						</div> <!-- Cierra Stock-->
+
+					<!-- Local -->
+						<div class="search_panel">
+						<form action="#" th:action="@{/abms/agregarlocalyvolveraindex}" th:object="${localModel}" method="post" id="search_form_3" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							
+							<div class="search_item">
+								<div>Localidad</div>
+								<input type="text" th:field="*{localidad}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>Calle</div>
+								<input type="text" th:field="*{calle}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>Numero</div>
+								<input type="number" th:field="*{numero}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>Longitud</div>
+								<input type="number" step="any"  th:field="*{longitud}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>Latitud</div>
+								<input type="number"  step="any" th:field="*{latitud}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>Telefono</div>
+								<input type="number" th:field="*{telefono}" class="destination search_input" required="required">
+							</div>
+										
+							<div class="search_item">
+								<div>Gerente del local</div>
+								<select placeholder="gerente" th:field="*{gerente.id}"  class="dropdown_item_select search_input">
+									 <option th:each="g: ${gerentes}"
+					                    th:text="${g.nombre}"
+					                    th:value="${g.id}"></option>
+								</select>
+							</div>			
+										
+							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
+						</form>
+						
+						</div> <!-- LOCAL-->
+						
+						<div class="search_panel">
+					
+						<form action="#" th:action="@{/abms/agregargerenteyvolveraindex}" th:object="${gerenteModel}" method="post" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							
+							<div class="search_item">
+								<div>Nombre:</div>
+								<input type="text" th:field="*{nombre}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>Apellido:</div>
+								<input type="text" th:field="*{apellido}" class="destination search_input" required="required"/>
+							</div>
+							
+							<div class="search_item">
+								<div>Sueldo</div>
+								<input type="number" th:field="*{sueldoBasico}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>DNI</div>
+								<input type="number" step="any" th:field="*{dni}" class="destination search_input" required="required">
+							</div>
+							
+							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
+						</form>
+						
+						</div> <!-- Gerente-->
+						
+						<div class="search_panel">
+						<form action="#" th:action="@{/abms/agregarclienteyvolveraindex}" th:object="${clienteModel}" method="post" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							
+							<div class="search_item">
+								<div>Nombre:</div>
+								<input type="text" th:field="*{nombre}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>Apellido:</div>
+								<input type="text" th:field="*{apellido}" class="destination search_input" required="required"/>
+							</div>
+						
+						
+							<div class="search_item">
+								<div>E-Mail</div>
+								<input type="text" th:field="*{mail}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>DNI</div>
+								<input type="number"  th:field="*{dni}" class="destination search_input" required="required">
+							</div>
+										
+							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
+						</form>
+						
+						</div> <!-- Cierra CLIENTE-->
+						
+						</div> <!-- VENDEDOR-->
+				
+						<div class="search_panel">
+						<form action="#" th:action="@{/abms/agregarvendedoryvolveraindex}" th:object="${vendedorModel}" method="post" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							
+							<div class="search_item">
+								<div>Nombre:</div>
+								<input type="text" th:field="*{nombre}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>Apellido:</div>
+								<input type="text" th:field="*{apellido}" class="destination search_input" required="required"/>
+							</div>
+							
+							<div class="search_item">
+								<div>Sueldo</div>
+								<input type="number" th:field="*{sueldoBasico}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>Extra</div>
+								<input type="number" step="any" th:field="*{extra}" class="destination search_input" required="required">
+							</div>
+							
+							<div class="search_item">
+								<div>DNI</div>
+								<input type="number"  th:field="*{dni}" class="destination search_input" required="required">
+							</div>
+							
+							<button type="submit" class="button search_button">Agregar<span></span><span></span><span></span></button>
+						</form>
+						
+						</div> <!-- Cierra el panel VENDEDOR-->
+						
+						<div class="search_panel">
+										
+						<form action="#" th:action="@{/abms/distancias}" th:object="${localModel}" method="post" id="search_form_7" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+									
+							<div class="search_item">
+								<div>DISTANCIA CON: </div>
+								<select placeholder="localModel" th:field="*{id}"  class="dropdown_item_select search_input">
+									 <option th:each="l: ${locales}"
+					                    th:text="${l.localidad}"
+					                    th:value="${l.id}"></option>
+								</select>
+							</div>	
+												
+							<button type="submit" class="button search_button">Calcular distancias<span></span><span></span><span></span></button>
+						</form>
+						
+						</div> <!-- DISTANCIAS-->
+	
+					<!-- Search Panel -->
+
+					<div class="search_panel">
+						<form action="#" th:action="@{/personas}" id="search_form_4" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							
+							<button class="button search_button">MENU PERSONAL<span></span><span></span><span></span></button>
+						</form>
+					</div>
+
+					<!-- Search Panel -->
+
+					<div class="search_panel">
+						<form action="#" id="search_form_5" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							<div class="search_item">
+								<div>Destino</div>
+								<input type="text" class="destination search_input" required="required">
+							</div>
+							<div class="search_item">
+								<div>Quiero ir el....</div>
+								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
+							</div>
+							<div class="search_item">
+								<div>Volvere el....</div>
+								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
+							</div>
+							<div class="search_item">
+								<div>Adultos</div>
+								<select name="adults" id="adults_2" class="dropdown_item_select search_input">
+									<option>01</option>
+									<option>02</option>
+									<option>03</option>
+								</select>
+							</div>
+							<div class="search_item">
+								<div>Menores</div>
+								<select name="children" id="children_2" class="dropdown_item_select search_input">
+									<option>0</option>
+									<option>02</option>
+									<option>03</option>
+								</select>
+							</div>
+							<button class="button search_button">Buscar<span></span><span></span><span></span></button>
+						</form>
+					</div>
+
+					<!-- Search Panel -->
+
+					<div class="search_panel">
+						<form action="#" id="search_form_6" class="search_panel_content d-flex flex-lg-row flex-column align-items-lg-center align-items-start justify-content-lg-between justify-content-start">
+							<div class="search_item">
+									<div>Destino</div>
+								<input type="text" class="destination search_input" required="required">
+							</div>
+							<div class="search_item">
+								<div>Quiero ir el....</div>
+								<input type="text" class="check_in search_input" placeholder="YYYY-MM-DD">
+							</div>
+							<div class="search_item">
+								<div>Volvere el....</div>
+								<input type="text" class="check_out search_input" placeholder="YYYY-MM-DD">
+							</div>
+						
+							<div class="search_item">
+								<div>Menores</div>
+								<select name="children" id="children_2" class="dropdown_item_select search_input">
+									<option>0</option>
+									<option>02</option>
+									<option>03</option>
+								</select>
+							</div>
+							<button class="button search_button">Buscar<span></span><span></span><span></span></button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>		
+	</div>
+
+
+<!-- FIIIIIIIIIIIN  Panel ABM -->
+
+
+<!-- Lista productos -->
+<div  class="offers">
+		<div class="container">
+			<div class="row">
+				<div class="col text-center">
+					<h2 class="section_title">Productos Disponibles</h2>
+				</div>
+			</div>
+			
+			<div  class="row offers_items">
+
+				<!-- Cada producto tiene-->
+				<div th:each="producto : ${productos}" class="col-lg-6 offers_col">
+					<div class="offers_item">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="offers_image_container">
+									<!-- Image by https://unsplash.com/@kensuarez -->
+									<!-- Image
+									<div class="offers_image_background" style="background-image:url(images/offer_1.jpg)"></div>
+									sin imagen por ahora-->
+									<div class="offer_name" >   <a href="#" th:text="${producto.nombre}"> </a> </div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="offers_content">
+									<div class="offers_price" th:text="${producto.precioUnitario}" >  <span>precio unitario</span></div>
+									<div class="rating_r rating_r_4 offers_rating">
+										<i></i>
+										<i></i>
+										<i></i>
+										<i></i>
+										<i></i>
+									</div>
+									<p class="offers_text" th:text="${producto.descripcion}"></p>
+									
+									<div class="offers_link">     
+									
+									<a th:href="@{/abms/{id}(id=${producto.id})}">Editar</a> </div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<!-- Fin de ese producto -->
+				
+			</div>
+		</div>
+	</div>
+	
+	
+	<!-- LISTAS DE EMPLEADOS -->
+		<div class="offers">
+				<div class="container">
+					<div class="row">
+						<div class="col text-center">
+							<h2 class="section_title">Lista de Gerentes</h2>
+						</div>
+					</div>
+			<div class="row offers_items">
+
+				<!-- Cada producto tiene-->
+				<div th:each="gerente : ${gerentes}" class="col-lg-6 offers_col">
+					<div class="offers_item">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="offers_image_container">
+									<!-- Image by https://unsplash.com/@kensuarez -->
+									<!-- Image
+									<div class="offers_image_background" style="background-image:url(images/offer_1.jpg)"></div>
+									sin imagen por ahora-->
+									<div class="offer_name" >   <a href="#" th:text="${gerente.nombre}"> </a> </div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="offers_content">
+									<div class="offers_price" th:text="${gerente.apellido}" >  <span>Apellido:</span></div>
+									<div class="rating_r rating_r_4 offers_rating">
+										<i></i>
+										<i></i>
+										<i></i>
+										<i></i>
+										<i></i>
+									</div>
+									<p class="offers_text" th:text="${gerente.dni}"></p>
+									
+									<div class="offers_link">     
+									
+									<a th:href="@{/abms/gerente/{id}(id=${gerente.id})}">Editar</a> </div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<!-- Fin de ese producto -->
+			
+			</div>
+
+					<div class="row">
+						<div class="col text-center">
+							<h2 class="section_title">Lista de Vendedores</h2>
+						</div>
+					</div>
+			<div class="row offers_items">
+
+				<!-- Cada producto tiene-->
+				<div th:each="vendedor : ${vendedores}" class="col-lg-6 offers_col">
+					<div class="offers_item">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="offers_image_container">
+									<!-- Image by https://unsplash.com/@kensuarez -->
+									<!-- Image
+									<div class="offers_image_background" style="background-image:url(images/offer_1.jpg)"></div>
+									sin imagen por ahora-->
+									<div class="offer_name" >   <a href="#" th:text="${vendedor.nombre}"> </a> </div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="offers_content">
+									<div class="offers_price" th:text="${vendedor.apellido}" >  <span>Apellido:</span></div>
+									<div class="rating_r rating_r_4 offers_rating">
+										<i></i>
+										<i></i>
+										<i></i>
+										<i></i>
+										<i></i>
+									</div>
+									<p class="offers_text" th:text="${vendedor.dni}"></p>
+									
+									<div class="offers_link">     
+									
+									<a th:href="@{/abms/vendedor/{id}(id=${vendedor.id})}">Editar</a> </div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<!-- Fin de ese producto -->
+			
+			</div>
+			
+			
+			<div class="row">
+						<div class="col text-center">
+							<h2 class="section_title">Lista de Clientes</h2>
+						</div>
+					</div>
+			<div class="row offers_items">
+
+				<!-- Cada producto tiene-->
+				<div th:each="cliente : ${clientes}" class="col-lg-6 offers_col">
+					<div class="offers_item">
+						<div class="row">
+							<div class="col-lg-6">
+								<div class="offers_image_container">
+									<!-- Image by https://unsplash.com/@kensuarez -->
+									<!-- Image
+									<div class="offers_image_background" style="background-image:url(images/offer_1.jpg)"></div>
+									sin imagen por ahora-->
+									<div class="offer_name" >   <a href="#" th:text="${cliente.nombre}"> </a> </div>
+								</div>
+							</div>
+							<div class="col-lg-6">
+								<div class="offers_content">
+									<div class="offers_price" th:text="${cliente.apellido}" >  <span>Apellido:</span></div>
+									<div class="rating_r rating_r_4 offers_rating">
+										<i></i>
+										<i></i>
+										<i></i>
+										<i></i>
+										<i></i>
+									</div>
+									<p class="offers_text" th:text="${cliente.dni}"></p>
+									
+									<div class="offers_link">     
+									
+									<a th:href="@{/abms/cliente/{id}(id=${cliente.id})}">Editar</a> </div>
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> 
+				<!-- F------------------------------- -->
+				
+
+			</div>
+			
+		
+			
+		</div>
+	</div>
+
+	<!-- Copyright -->
+
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 order-lg-1 order-2  ">
+					<div class="copyright_content d-flex flex-row align-items-center">
+						<div><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></div>
+					</div>
+				</div>
+				<div class="col-lg-9 order-lg-2 order-1">
+					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
+						<div class="footer_nav">
+							<ul class="footer_nav_list">
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/styles/bootstrap4/popper.js"></script>
+<script src="/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="/plugins/easing/easing.js"></script>
+<script src="/js/custom.js"></script>
+
+</body>
+
+</html>
