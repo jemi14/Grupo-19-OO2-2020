@@ -90,35 +90,31 @@ public class CargaController {
 		 }
 		
 		
-			GerenteModel g1 = new GerenteModel("Griselda", "Benitez", LocalDate.of(1992, Month.JANUARY, 1), 1111111,  120000 );
-			GerenteModel g2 = new GerenteModel("Leandro", "Haugg", LocalDate.of(1992, Month.JANUARY, 4), 1222222,  220000 );
-			GerenteModel g3 = new GerenteModel("Ramiro", "Benitez", LocalDate.of(1992, Month.JANUARY, 1), 133333, 320000 );
-			GerenteModel g4 = new GerenteModel("Lautaro", "Braum", LocalDate.of(1992, Month.AUGUST, 1), 1444444,  120000 );
-			GerenteModel g5= new GerenteModel("Alberto", "Iglesias", LocalDate.of(1992, Month.AUGUST, 1), 155555,  220000 );
-			GerenteModel g6 = new GerenteModel("Aldana", "Altamiranno", LocalDate.of(1992, Month.AUGUST, 1), 1666666, 320000 );
-			
-	
-			ClienteModel c1 = new ClienteModel("Raul", "Ortiz", LocalDate.of(1992, Month.AUGUST, 1), 3111111, "r@mail");
-			ClienteModel c2 = new ClienteModel("Lara", "Muniz", LocalDate.of(1992, Month.AUGUST, 1), 3222222, "l@mail");
-			ClienteModel c3 = new ClienteModel("Lucas", "Perez", LocalDate.of(1992, Month.AUGUST, 1), 3233333, "ul@mail");
+		    GerenteModel g1 = new GerenteModel("Griselda", "Benitez", LocalDate.of(1995, Month.JANUARY, 14), 1111111,  120000 );
+			GerenteModel g2 = new GerenteModel("Leandro", "Gomez", LocalDate.of(1992, Month.JANUARY, 4), 1222222,  220000 );
+			GerenteModel g3 = new GerenteModel("Marcelo", "Wolf", LocalDate.of(1993, Month.JANUARY, 1), 133333, 320000 );
+			GerenteModel g4 = new GerenteModel("Agustin", "Trotta", LocalDate.of(1991, Month.AUGUST, 1), 1444444,  120000 );
+			GerenteModel g5 = new GerenteModel("Alberto", "Iglesias", LocalDate.of(1992, Month.AUGUST, 1), 155555,  220000 );
+			GerenteModel g6 = new GerenteModel("Aldana", "Altamirano", LocalDate.of(1990, Month.AUGUST, 1), 1666666, 320000 );
+				
+			ClienteModel c1 = new ClienteModel("Raul", "Ortiz", LocalDate.of(1998, Month.AUGUST, 1), 3111111, "r@mail");
+			ClienteModel c2 = new ClienteModel("Lara", "Muniz", LocalDate.of(1991, Month.AUGUST, 2), 3222222, "l@mail");
+			ClienteModel c3 = new ClienteModel("Lucas", "Perez", LocalDate.of(1992, Month.AUGUST, 3), 3233333, "ul@mail");
 			
 			
 			ProductoModel p1 = new ProductoModel( "EL mas rico, lo vale...", 123.5f,"Chocolate");
 			ProductoModel p2 = new ProductoModel( "Baratito pero delicioso", 13.5f,"Kinder");
-			ProductoModel p3 = new ProductoModel( "Duro pero rico", 11f,"Caramelo");
+			ProductoModel p3 = new ProductoModel( "Rico", 11f,"Caramelo palito de la selva");
 			ProductoModel p4 = new ProductoModel( "Sabor del conurbano", 15.1f,"Helado");
-			ProductoModel p5 = new ProductoModel( "1kg de las mejores pepas", 20f,"Pepas");
+			ProductoModel p5 = new ProductoModel( "Las mejores pepas", 20f,"Pepas");
 			
-			
-			
+
 			clienteService.insert(c1);clienteService.insert(c2);clienteService.insert(c3);
 			gerenteService.insertOrUpdate(g1);gerenteService.insertOrUpdate(g2);gerenteService.insertOrUpdate(g3);
 			gerenteService.insertOrUpdate(g4);gerenteService.insertOrUpdate(g5);gerenteService.insertOrUpdate(g6);
 			
 			productoService.insert(p1);productoService.insert(p2);productoService.insert(p3);
 			productoService.insert(p4);productoService.insert(p5);
-			
-			
 			
 			
 			LocalModel local1 = new LocalModel("Banfield", "Rodriguez", 1111,1234l,-34.42f,-58.23f,gerenteService.findByIdPersona(4));
@@ -136,20 +132,18 @@ public class CargaController {
 			localService.insertOrUpdate(local6);
 			
 			
-			
-			
-			VendedorModel v1 = new VendedorModel("Jorge", "Garcia", LocalDate.of(1992, Month.AUGUST, 1), 2111111,0.4f, null,15000,localService.findById(1) );
-			VendedorModel v2 = new VendedorModel("Raul", "Baldi", LocalDate.of(1992, Month.AUGUST, 1),  2222222,0.4f, null,11000,localService.findById(1) );
-			VendedorModel v3 = new VendedorModel("Raul", "Jaramillo", LocalDate.of(1992, Month.AUGUST, 1), 233333,0.4f, null,23000,localService.findById(2) );
-			VendedorModel v4 = new VendedorModel("Roberto", "Lopez", LocalDate.of(1992, Month.AUGUST, 1), 24444,0.4f, null,20000,localService.findById(2) );
-			VendedorModel v5 = new VendedorModel("Samuel", "Plaul", LocalDate.of(1992, Month.AUGUST, 1),  255555,0.4f, null,110000,localService.findById(3) );
-			VendedorModel v6 = new VendedorModel("Ismael", "Jenez", LocalDate.of(1992, Month.AUGUST, 1), 26666,0.4f, null,23000,localService.findById(3) );
-			VendedorModel v7= new VendedorModel("Abraham", "Albert", LocalDate.of(1992, Month.AUGUST, 1), 27777,0.4f, null,100000,localService.findById(3) );
-			VendedorModel v8 = new VendedorModel("Sara", "Saba", LocalDate.of(1992, Month.AUGUST, 1),  288888,0.4f, null,11000,localService.findById(4) );
-			VendedorModel v9 = new VendedorModel("Isaac", "Jaramillo", LocalDate.of(1992, Month.AUGUST, 1), 29999,0.4f, null,230000,localService.findById(4) );
-			VendedorModel v10 = new VendedorModel("Lot", "Garcia", LocalDate.of(1992, Month.AUGUST, 1), 210101,0.4f, null,220000,localService.findById(5) );
-			VendedorModel v11 = new VendedorModel("Rebeca", "Baldi", LocalDate.of(1992, Month.AUGUST, 1),  21011111,0.4f, null,110000,localService.findById(6) );
-			VendedorModel v12 = new VendedorModel("Juliana", "Jaramillo", LocalDate.of(1992, Month.AUGUST, 1), 210122222,0.4f, null,230000,localService.findById(6) );
+			VendedorModel v1 = new VendedorModel("Jorge", "Garcia", LocalDate.of(1990, Month.APRIL, 1), 21111111,0.4f, null,15000,localService.findById(1) );
+			VendedorModel v2 = new VendedorModel("Raul", "Baldi", LocalDate.of(1991, Month.DECEMBER, 2), 22222222,0.4f, null,11000,localService.findById(1) );
+			VendedorModel v3 = new VendedorModel("Belen", "Haugg", LocalDate.of(1992, Month.FEBRUARY, 3), 23333333,0.4f, null,23000,localService.findById(2) );
+			VendedorModel v4 = new VendedorModel("Roberto", "Lopez", LocalDate.of(1989, Month.JULY, 4), 24444444,0.4f, null,20000,localService.findById(2) );
+			VendedorModel v5 = new VendedorModel("Samuel", "Diaz", LocalDate.of(1988, Month.AUGUST, 5), 25555555,0.4f, null,110000,localService.findById(3) );
+			VendedorModel v6 = new VendedorModel("Ismael", "Jenez", LocalDate.of(1987, Month.JUNE, 6), 26666666,0.4f, null,23000,localService.findById(3) );
+			VendedorModel v7= new VendedorModel("Abraham", "Albert", LocalDate.of(1986, Month.MARCH, 7), 27777777,0.4f, null,10000,localService.findById(3) );
+			VendedorModel v8 = new VendedorModel("Sara", "Saba", LocalDate.of(1985, Month.NOVEMBER, 8),  28888888,0.4f, null,11000,localService.findById(4) );
+			VendedorModel v9 = new VendedorModel("Isaac", "Tres", LocalDate.of(1995, Month.MAY, 9), 29999999,0.4f, null,23000,localService.findById(4) );
+			VendedorModel v10 = new VendedorModel("Lot", "Azul", LocalDate.of(1987, Month.OCTOBER, 10), 21010101,0.4f, null,22000,localService.findById(5) );
+			VendedorModel v11 = new VendedorModel("Rebeca", "Blanco", LocalDate.of(1997, Month.SEPTEMBER, 11), 21011111,0.4f, null,11000,localService.findById(6) );
+			VendedorModel v12 = new VendedorModel("Juliana", "Diez", LocalDate.of(1981, Month.AUGUST, 12), 21012222,0.4f, null,23000,localService.findById(6) );
 
 			
 			
@@ -256,13 +250,7 @@ public class CargaController {
 		pedidoService.insertOrUpdate(pedido7);
 		pedidoService.insertOrUpdate(pedido8);
 	
-				
-		
-
-		
-		
-		
-		
+			
 		
 		return new RedirectView(ViewRouteHelper.PRODUCTOS_ROOT);
 	}

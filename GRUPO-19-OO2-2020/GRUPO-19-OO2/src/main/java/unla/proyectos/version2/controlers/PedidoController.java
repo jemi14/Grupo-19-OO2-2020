@@ -3,6 +3,7 @@ package unla.proyectos.version2.controlers;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.text.DecimalFormat;
 import java.time.LocalDate;
 
 
@@ -340,8 +341,9 @@ public class PedidoController {
        documento.add(new Paragraph("-------------------------------------------------------------------------------------------------------------"));
        documento.add(new Paragraph("PRODUCTO                  CANTIDAD                 PRECIO                     TOTAL"));
        documento.add(new Paragraph("-------------------------------------------------------------------------------------------------------------"));
+       DecimalFormat dF = new DecimalFormat("#.##");
        documento.add(new Paragraph(p.getProducto().getNombre() +"                           " +p.getCantidad() +"                           $ " +
-    		   p.getProducto().getPrecioUnitario() +"                           $ "+(p.getCantidad()*p.getProducto().getPrecioUnitario()) ));
+    		   p.getProducto().getPrecioUnitario() +"                           $ "+dF.format((p.getCantidad()*p.getProducto().getPrecioUnitario())) ));
        
        //Dejo renglones
        for(int i =0; i<15; i++) {
