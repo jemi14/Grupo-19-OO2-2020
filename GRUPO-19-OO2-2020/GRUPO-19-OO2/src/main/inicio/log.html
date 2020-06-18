@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>UNLa</title>
+		<!-- Bootstrap core CSS -->
+		<style> 
+		img {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		
+		form.center {
+		  margin-left:auto; 
+		  margin-right:auto;
+		}
+		
+</style>
+	</head>
+	<body>
+	<div class="modal-dialog text-center">
+		<div class="col-sm-8 main-section">
+			<div class="modal-content">
+				<div class="col-12 user-img">
+					<img src="https://scontent-eze1-1.xx.fbcdn.net/v/t1.0-9/50089358_950907528452656_7463309952375848960_n.png?_nc_cat=100&_nc_sid=09cbfe&_nc_ohc=7jOVB8Lmn2MAX8an3Yh&_nc_ht=scontent-eze1-1.xx&oh=1bed1d1bbe276bacd12370f47cb93ff7&oe=5F10161D" th:src="@{/img/user.png}"  style="width:100%;max-width:300px"/>
+				</div>
+	    <!-- Page Content -->
+	    <div class="container">
+	      <div class="jumbotron">
+			
+	        <h1 class="display-5">Login</h1>
+	        <form action="logInGerente.html">
+				<input type="submit" value=" Gerente " />
+			</form>
+			
+								<br>
+								
+	        <form action="logInVendedor.html" class="center">
+				<input type="submit" value="Vendedor" />
+			</form>
+			
+				
+								<br>
+			
+	        <form action="logInCliente.html">
+				<input type="submit" value="  Cliente  " />
+			</form>
+								<br>
+								
+								<p></p>
+							</form>
+		</div>
+</body>
+</html>
