@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>UNLa Stock - Grupo 19</title>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="Travelix Project">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" type="text/css" href="/styles/bootstrap4/bootstrap.min.css">
+<link href="/plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.carousel.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/owl.theme.default.css">
+<link rel="stylesheet" type="text/css" href="/plugins/OwlCarousel2-2.2.1/animate.css">
+<link rel="stylesheet" type="text/css" href="/styles/main_styles.css">
+<link rel="stylesheet" type="text/css" href="/styles/responsive.css">
+
+
+</head>
+
+
+
+<body>
+
+<div class="super_container">
+	
+	<!-- Header -->
+
+	<header class="header">
+
+		<!-- Top Bar -->
+
+		<div class="top_bar">
+			<div class="container">
+				<div class="row">
+					<div class="col d-flex flex-row">
+						<div class="phone">Desarrollado por el grupo 19</div>
+						<div class="social">
+							<ul class="social_list">
+								<li class="social_list_item"><a href="https://www.facebook.com/unlaoficial"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="https://twitter.com/UNLaOficial?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+								<li class="social_list_item"><a href="https://www.instagram.com/unlaoficial/?hl=es-la"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							</ul>
+						</div>
+						<div class="user_box ml-auto">
+							<div class="user_box_login user_box_link"><a href="#">Iniciar</a></div>
+							<div class="user_box_register user_box_link"><a href="#">Registrarte</a></div>
+						</div>
+					</div>
+				</div>
+			</div>		
+		</div>
+
+		<!-- Main Navigation -->
+
+		<nav class="main_nav">
+			<div class="container">
+				<div class="row">
+					<div class="col main_nav_col d-flex flex-row align-items-center justify-content-start">
+						<div class="logo_container">
+							<div class="logo"><a href="http://www.unla.edu.ar/"><img src="/images/Universidad_Nacional_de_Lanús_logoChico.jpg" alt="">UNla-Stock19</a></div>
+						</div>
+						<div class="main_nav_container ml-auto">
+							<ul class="main_nav_list">
+								<li class="main_nav_item"><a href="/">Inicio</a></li>
+								<li class="main_nav_item"><a href="/abms">Administracion</a></li>
+								<li class="main_nav_item"><a href="/compras">Comprar</a></li>
+								<li class="main_nav_item"><a href="/pedidos">Pedidos</a></li>
+							</ul>
+						</div>
+					
+
+						<div class="hamburger">
+							<i class="fa fa-bars trans_200"></i>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</nav>
+
+	</header>
+
+	<div class="menu trans_500">
+		<div class="menu_content d-flex flex-column align-items-center justify-content-center text-center">
+			<div class="menu_close_container"><div class="menu_close"></div></div>
+			<div class="logo menu_logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+			<ul>
+								<li class="main_nav_item"><a href="#">Inicio</a></li>
+								<li class="main_nav_item"><a href="">Nosotros</a></li>
+								<li class="main_nav_item"><a href="">Locales</a></li>
+								<li class="main_nav_item"><a href="">Productos</a></li>
+								<li class="main_nav_item"><a href="">Contactanos</a></li>
+			</ul>
+		</div>
+	</div>
+
+	
+	<!-- Home -->
+
+	<div class="home">
+		
+		<!-- Home Slider -->
+
+		<div class="home_slider_container">
+			
+			<div class="owl-carousel owl-theme home_slider">
+
+				<!-- Slider Item -->
+				<div class="owl-item home_slider_item">
+					<!-- Image by https://unsplash.com/@anikindimitry -->
+					<div class="home_slider_background" style="background-image:url(/images/home_slider.jpg)"></div>
+
+					<div class="home_slider_content text-center">
+						<div class="home_slider_content_inner" data-animation-in="flipInX" data-animation-out="animate-out fadeOut">
+							<h1>UNLa</h1>
+							<h1>Stock19</h1>
+							<div class="button home_slider_button"><div class="button_bcg"></div><a href="#">iniciar....<span></span><span></span><span></span></a></div>
+						</div>
+					</div>
+				</div>
+
+				
+
+
+			</div>
+			
+			
+		
+			
+		</div>
+
+	</div>
+	
+	
+
+
+<!-- editar y eliminar -->
+<div class="offers">
+		<div class="container">
+			
+		
+			
+			
+							<form action="#" th:action="@{/abms/updategerente}" th:object="${gerenteModel}"
+					method="post">
+					<input type="hidden" th:field="*{id}" />
+					
+					<p>
+						Nombre: <input type="text" th:field="*{nombre}" />
+					</p>
+					
+					<p>
+						Apellido: <input type="text" th:field="*{apellido}" />
+					</p>
+					
+					<p>
+						DNI: <input type="text" th:field="*{dni}" />
+					</p>
+					
+					<p>
+						Sueldo: <input type="text" th:field="*{sueldoBasico}" />
+					</p>
+					<input type="submit" value="Editar" />
+				</form>
+				<form action="#" th:action="@{/abms/deletegerente/{id}(id=${gerenteModel.id})}" method="post">
+					<input type="submit" value="Elimitar" />
+				</form>
+			
+			
+
+				
+				
+				
+				
+
+				
+				
+
+		</div>
+	</div>
+
+
+		
+						
+		
+
+	<!-- Copyright -->
+
+	<div class="copyright">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-3 order-lg-1 order-2  ">
+					<div class="copyright_content d-flex flex-row align-items-center">
+						<div><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+Orientación de Objetos II, Grupo 19 &copy;<script>document.write(new Date().getFullYear());</script> Marcelo Wolf, Agustin Trotta y Griselda Benitez Haugg <i class="fa fa-github" aria-hidden="true"></i> <a href="https://github.com/jemi14/Grupo-19-OO2-2020" target="_blank"> Github </a>
+<!-- ir al link al github. --></div>
+					</div>
+				</div>
+				<div class="col-lg-9 order-lg-2 order-1">
+					<div class="footer_nav_container d-flex flex-row align-items-center justify-content-lg-end">
+						<div class="footer_nav">
+							<ul class="footer_nav_list">
+								
+								
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
+
+<script src="/js/jquery-3.2.1.min.js"></script>
+<script src="/styles/bootstrap4/popper.js"></script>
+<script src="/styles/bootstrap4/bootstrap.min.js"></script>
+<script src="/plugins/OwlCarousel2-2.2.1/owl.carousel.js"></script>
+<script src="/plugins/easing/easing.js"></script>
+<script src="/js/custom.js"></script>
+
+
+
+
+
+</body>
+
+</html>
