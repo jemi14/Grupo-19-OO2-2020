@@ -1,15 +1,9 @@
-1- Borrar BASE DE DATOS
-2- Correr el sql final
-3- Correr HIBERNATE - No hay que cargar la base de datos con el boton ahora
+1- Correr el BD
 
-Hacer login con: 
-admin admin
-gerente gerente
-vendedor vendedor
-cliente cliente
+2- Login con: 
+Usuario: admin Contraseña: admin
+Usuario: gerente Contraseña: gerente
+Usuario: vendedor Contraseña: vendedor
+Usuario: cliente Contraseña: cliente
 
-4- primero proba todo con admin. 
-
-Si sale error
-
-SET GLOBAL time_zone = '-3:00';
+Si sale error: SET GLOBAL time_zone = '-3:00';
